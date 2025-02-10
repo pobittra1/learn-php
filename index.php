@@ -23,6 +23,8 @@ class person {
         global $name;
         $name = $changeName;
         echo "this is the name of the person = " . $changeName;
+        echo "this is the name of the person = " . $changeName;
+        echo "this is the name of the person = " . $changeName;
     }
 }
 
@@ -117,9 +119,73 @@ echo 'this is the time = ' . $t;
 var_dump($t); // 
 if ($t < 2) {
     echo "Have a good day!";
-} else {
+} 
+elseif ($t < 20) {
+    echo "Have a good morning!";
+}
+else {
     echo "Have a good night!";
 } 
+
+//php switch statement
+$favcolor = "red";
+switch ($favcolor) {
+    case "red":
+        echo "Your favorite color is red!";
+        break;
+    case "blue":
+        echo "Your favorite color is blue!";
+        break;
+    case "green":
+        echo "Your favorite color is green!";
+        break;
+    default:
+        echo "Your favorite color is neither red, blue, nor green!";
+} //output is Your favorite color is red!
+
+//php while loop
+$x = 1;
+while($x <= 5) {
+    echo "The number is: $x <br>";
+    $x++;
+}
+
+//php do while loop
+$x = 1;
+do {
+    echo "The number is: $x <br>";
+    $x++;
+} while ($x <= 5);
+
+//php for loop
+for ($x = 0; $x <= 10; $x++) {
+    echo "The number is: $x <br>";
+}
+
+
+//phn function
+function writeMsg() {
+    echo "Hello world!";
+}
+writeMsg(); //output is Hello world!
+
+//php function with parameter
+function familyName($fname) {
+    echo "$fname Roy.<br>";
+}
+familyName("pobi");
+
+//php function with default parameter
+function setNameAndHeight($sName, $minheight = 50) {
+    echo "name $sName. The height is : $minheight <br>";
+}
+setNameAndHeight(pobi, 5.3); 
+setNameAndHeight(pobi, 5.6);
+
+
+//php date and time
+echo "Today is " . date("d-m-y") . "<br>";
+echo "Time is " . date("h:i/sa") . "<br>";
 
 
 
